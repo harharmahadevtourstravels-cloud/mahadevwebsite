@@ -7,7 +7,6 @@ export type Vehicle = {
   subtitle: string;
   seating: string;
   rate: number;
-  originalRate: number | null;
   minBooking: string;
   image: string;
   images: string[];

@@ -18,6 +18,9 @@ export const NAV_ITEMS = [
   { label: 'Contact', href: '/#contact' }
 ];
 
+/** Navbar / footer “Book Now” → home booking form (“Ready to Travel? …”) */
+export const BOOK_NOW_HREF = '/#book';
+
 export const WHATSAPP_COUNTRY_CODE = '91';
 export const WHATSAPP_NUMBER = '918055159348';
 export const CONTACT_PHONE_DISPLAY = '+91 8055159348';
@@ -42,13 +45,9 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Premium MPV',
     seating: '7-8 Seater',
     rate: 18,
-    originalRate: null,
     minBooking: 'Minimum 300km/day',
-    image: 'https://images.unsplash.com/photo-1626235940024-8742881958ae?q=80&w=800',
-    images: [
-      'https://images.unsplash.com/photo-1626235940024-8742881958ae?q=80&w=1080',
-      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1080'
-    ],
+    image: '/images/innova/Screenshot%202026-05-01%20165238.png',
+    images: ['/images/innova/Screenshot%202026-05-01%20165238.png'],
     features: ['Luxury Interiors', 'Professional Driver', 'AC Included', 'Ideal for Families']
   },
 
@@ -59,12 +58,16 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Premium Luxury Van',
     seating: '16 Seater',
     rate: 40,
-    originalRate: null,
     minBooking: '₹40/km',
-    image: 'https://images.unsplash.com/photo-1687493645938-5f3501e2b819?q=80&w=800',
+    image: '/images/urbania/20250704_144504.jpg.jpeg',
     images: [
-      'https://images.unsplash.com/photo-1687493645938-5f3501e2b819?q=80&w=1080',
-      'https://images.unsplash.com/photo-1630942324698-f531158b525b?q=80&w=1080'
+      '/images/urbania/20250704_144504.jpg.jpeg',
+      '/images/urbania/IMG-20250508-WA0072.jpg.jpeg',
+      '/images/urbania/IMG-20250508-WA0088.jpg.jpeg',
+      '/images/urbania/IMG-20250508-WA0073.jpg.jpeg',
+      '/images/urbania/IMG-20250508-WA0074.jpg.jpeg',
+      '/images/urbania/IMG-20250508-WA0078.jpg.jpeg',
+      '/images/urbania/IMG-20250508-WA0080.jpg.jpeg'
     ],
     features: ['Luxury AC Interiors', 'Recliner Seats', 'Ideal for Weddings & Tours', 'Professional Driver']
   },
@@ -75,12 +78,12 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Mini Van Rental',
     seating: '13 Seater',
     rate: 25,
-    originalRate: 21,
     minBooking: 'AC: ₹25 | Non-AC: ₹21',
-    image: 'https://images.unsplash.com/photo-1563810238830-4e366710486c?q=80&w=800',
+    image: '/images/s%2013/IMG-20250519-WA0035.jpg.jpeg',
     images: [
-      'https://images.unsplash.com/photo-1563810238830-4e366710486c?q=80&w=1080',
-      'https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1080'
+      '/images/s%2013/IMG-20250519-WA0035.jpg.jpeg',
+      '/images/s%2013/IMG-20250519-WA0033.jpg.jpeg',
+      '/images/s%2013/IMG-20250519-WA0034.jpg.jpeg'
     ],
     features: ['Pushback Seats', 'Music System', 'AC & Non-AC Variants', 'Local & Outstation']
   },
@@ -91,13 +94,9 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Group Travel Van',
     seating: '17 Seater',
     rate: 28,
-    originalRate: 23,
     minBooking: 'AC: ₹28 | Non-AC: ₹23',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800',
-    images: [
-      'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1080',
-      'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=1080'
-    ],
+    image: '/images/s%2017/WhatsApp%20Image%202026-04-30%20at%203.24.43%20PM.jpeg',
+    images: ['/images/s%2017/WhatsApp%20Image%202026-04-30%20at%203.24.43%20PM.jpeg'],
     features: ['Spacious Boot Space', 'Well Maintained', 'AC & Non-AC', 'Wedding Trips']
   },
   {
@@ -107,12 +106,9 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Executive Group Travel',
     seating: '20 Seater',
     rate: 30,
-    originalRate: 25,
     minBooking: 'AC: ₹30 | Non-AC: ₹25',
-    image: 'https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?q=80&w=800',
-    images: [
-      'https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?q=80&w=1080'
-    ],
+    image: '/images/s-20/WhatsApp%20Image%202026-04-30%20at%203.24.43%20PM.jpeg',
+    images: ['/images/s-20/WhatsApp%20Image%202026-04-30%20at%203.24.43%20PM.jpeg'],
     features: ['High Ceiling', 'Ample Legroom', 'AC/Non-AC Options', 'Corporate Travel']
   },
   {
@@ -122,11 +118,18 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Large Capacity Van',
     seating: '26 Seater',
     rate: 37,
-    originalRate: 30,
     minBooking: 'AC: ₹37 | Non-AC: ₹30',
-    image: 'https://images.unsplash.com/photo-1600320844678-43997e33f380?q=80&w=800',
+    image: '/images/s%2026/20250911_202443.jpg.jpeg',
     images: [
-      'https://images.unsplash.com/photo-1600320844678-43997e33f380?q=80&w=1080'
+      '/images/s%2026/20250911_202443.jpg.jpeg',
+      '/images/s%2026/20250912_171503.jpg.jpeg',
+      '/images/s%2026/20250912_171513.jpg.jpeg',
+      '/images/s%2026/20250606_183614.jpg.jpeg',
+      '/images/s%2026/20250606_183623.jpg.jpeg',
+      '/images/s%2026/20250606_184307.jpg.jpeg',
+      '/images/s%2026/20250606_184421.jpg.jpeg',
+      '/images/s%2026/20250606_184426.jpg.jpeg',
+      '/images/s%2026/20250606_184835.jpg.jpeg'
     ],
     features: ['Maximum Comfort', 'Ideal for Pilgrimage', 'Transparent Pricing', 'Professional Driver']
   },
@@ -137,12 +140,16 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Standard Travel Coach',
     seating: '35 Seater',
     rate: 60,
-    originalRate: 42,
     minBooking: 'AC: ₹60 | Non-AC: ₹42',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800',
+    image: '/images/s35/20240308_232901_dd4eeb4e-5b05-4bfa-85fc-96bdf0d4226e.JPG.jpeg',
     images: [
-      'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1080',
-      'https://images.unsplash.com/photo-1517448931760-9bf4414148c5?q=80&w=1080'
+      '/images/s35/20240308_232901_dd4eeb4e-5b05-4bfa-85fc-96bdf0d4226e.JPG.jpeg',
+      '/images/s35/20240308_232856_10c27760-7a16-45b1-9a79-643772e26c59.JPG.jpeg',
+      '/images/s35/20240308_232859_db9d0749-10df-446f-bd95-e446ad2f97bc.JPG.jpeg',
+      '/images/s35/20240308_232900_178f57d4-bd06-45bf-a9fd-367c01e0fa46.JPG.jpeg',
+      '/images/s35/20240308_232900_4bae9530-43d4-4b80-85e7-e6cc4b12c3b1.JPG.jpeg',
+      '/images/s35/20240815_095742_2d0faa23-2037-403c-866f-3251c8b84340.JPG.jpeg',
+      '/images/s35/20240815_095742_70240e25-09c0-45f6-982e-3a81021278dd.JPG.jpeg'
     ],
     features: ['Large Group Travel', 'Under-bus Storage', 'AC & Non-AC', 'Wedding Travel']
   },
@@ -153,11 +160,16 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Deluxe Tourist Coach',
     seating: '40 Seater',
     rate: 63,
-    originalRate: 45,
     minBooking: 'AC: ₹63 | Non-AC: ₹45',
-    image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=800',
+    image: '/images/s40/bus-40-01.jpeg',
     images: [
-      'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=1080'
+      '/images/s40/bus-40-01.jpeg',
+      '/images/s40/bus-40-02.jpeg',
+      '/images/s40/bus-40-03.jpeg',
+      '/images/s40/bus-40-04.jpeg',
+      '/images/s40/bus-40-05.jpeg',
+      '/images/s40/bus-40-06.jpeg',
+      '/images/s40/bus-40-07.jpeg'
     ],
     features: ['Premium Seating', 'Entertainment System', 'AC/Non-AC Options', 'School/College Trips']
   },
@@ -168,11 +180,16 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Grand Group Coach',
     seating: '45 Seater',
     rate: 66,
-    originalRate: 49,
     minBooking: 'AC: ₹66 | Non-AC: ₹49',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800',
+    image: '/images/s-45/20250516_190340.jpg.jpeg',
     images: [
-      'https://images.unsplash.com/photo-1517448931760-9bf4414148c5?q=80&w=1080'
+      '/images/s-45/20250516_190340.jpg.jpeg',
+      '/images/s-45/20250707_203249.jpg.jpeg',
+      '/images/s-45/20251115_152620.jpg.jpeg',
+      '/images/s-45/FB_IMG_1747482298444.jpg.jpeg',
+      '/images/s-45/FB_IMG_1747482300646.jpg.jpeg',
+      '/images/s-45/FB_IMG_1747482302862.jpg.jpeg',
+      '/images/s-45/IMG-20250516-WA0034.jpg.jpeg'
     ],
     features: ['Smooth Suspension', 'Experienced Driver', 'AC & Non-AC', 'Outstation Journey']
   },
@@ -183,12 +200,15 @@ export const VEHICLES: Vehicle[] = [
     subtitle: 'Maximum Capacity Coach',
     seating: '49 Seater',
     rate: 70,
-    originalRate: 52,
     minBooking: 'AC: ₹70 | Non-AC: ₹52',
-    image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=800',
+    image: '/images/s49/IMG-20250508-WA0027.jpg.jpeg',
     images: [
-      'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?q=80&w=1080',
-      'https://images.unsplash.com/photo-1517448931760-9bf4414148c5?q=80&w=1080'
+      '/images/s49/IMG-20250508-WA0027.jpg.jpeg',
+      '/images/s49/IMG-20250508-WA0026.jpg.jpeg',
+      '/images/s49/IMG-20250508-WA0033.jpg.jpeg',
+      '/images/s49/IMG-20251104-WA0027.jpg.jpeg',
+      '/images/s49/IMG-20251104-WA0029.jpg.jpeg',
+      '/images/s49/IMG-20251104-WA0030.jpg.jpeg'
     ],
     features: ['Best-in-class AC', 'Plush Interiors', 'Ideal for Tours', 'Uniformed Driver']
   }

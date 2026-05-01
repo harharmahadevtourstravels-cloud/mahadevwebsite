@@ -11,7 +11,9 @@ export function HeroSection() {
           src="/images/herobg.webp"
           alt="Nashik outstation road travel with cab, tempo traveller, and bus rentals"
           priority
-          className="w-full h-full object-cover"
+          className="w-full h-full"
+          imageClassName="object-cover"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-linear-to-r from-[#0B1F3A]/95 via-[#0B1F3A]/80 to-transparent" />
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-[#0B1F3A]/40" />

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FormEvent, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { BookingCtaSection } from '@/features/home/sections/BookingCtaSection';
 import { BookingModal } from '@/features/home/sections/BookingModal';
 import { ContactStrip } from '@/features/home/sections/ContactStrip';

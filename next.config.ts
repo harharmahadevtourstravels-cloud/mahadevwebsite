@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const CANONICAL_ORIGIN = "https://harharmahadevtravels.in";
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       {

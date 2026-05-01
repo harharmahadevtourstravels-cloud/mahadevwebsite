@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import { Menu, Phone, X } from 'lucide-react';
-import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, NAV_ITEMS } from '../lib/constants';
+import { BOOK_NOW_HREF, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, NAV_ITEMS } from '../lib/constants';
 
 type HeaderProps = {
   logo: string;
@@ -88,35 +88,36 @@ export function Header({ logo, isMenuOpen, onToggleMenu, onCloseMenu }: HeaderPr
               <Phone className="w-4 h-4" />
               <span>{CONTACT_PHONE_DISPLAY}</span>
             </a>
-            <motion.a
-              href={CONTACT_PHONE_TEL}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-5 py-2.5 rounded-lg text-white shadow-md hover:shadow-lg transition-all"
-              style={{
-                background: 'linear-gradient(135deg, #FF6B2B 0%, #ff8555 100%)',
-                fontWeight: 600,
-                fontFamily: 'Poppins, sans-serif',
-                fontSize: '0.9rem'
-              }}
-            >
-              Book Now
-            </motion.a>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                href={BOOK_NOW_HREF}
+                className="inline-block px-5 py-2.5 rounded-lg text-white shadow-md hover:shadow-lg transition-all"
+                style={{
+                  background: 'linear-gradient(135deg, #FF6B2B 0%, #ff8555 100%)',
+                  fontWeight: 600,
+                  fontFamily: 'Poppins, sans-serif',
+                  fontSize: '0.9rem'
+                }}
+              >
+                Book Now
+              </Link>
+            </motion.div>
           </div>
 
           <div className="flex lg:hidden items-center gap-2 sm:gap-3">
-            <motion.a
-              href={CONTACT_PHONE_TEL}
-              whileTap={{ scale: 0.95 }}
-              className="hidden sm:flex px-4 py-2 rounded-lg text-white shadow-md"
-              style={{
-                background: 'linear-gradient(135deg, #FF6B2B 0%, #ff8555 100%)',
-                fontWeight: 600,
-                fontSize: '0.85rem'
-              }}
-            >
-              Book Now
-            </motion.a>
+            <motion.div whileTap={{ scale: 0.95 }} className="hidden sm:block">
+              <Link
+                href={BOOK_NOW_HREF}
+                className="inline-flex px-4 py-2 rounded-lg text-white shadow-md"
+                style={{
+                  background: 'linear-gradient(135deg, #FF6B2B 0%, #ff8555 100%)',
+                  fontWeight: 600,
+                  fontSize: '0.85rem'
+                }}
+              >
+                Book Now
+              </Link>
+            </motion.div>
 
             <motion.button
               whileTap={{ scale: 0.9 }}
@@ -172,19 +173,21 @@ export function Header({ logo, isMenuOpen, onToggleMenu, onCloseMenu }: HeaderPr
               </a>
 
               <div className="px-4 pt-2 sm:hidden">
-                <motion.a
-                  href={CONTACT_PHONE_TEL}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full px-6 py-3 rounded-lg text-white shadow-md flex items-center justify-center gap-2"
-                  style={{
-                    background: 'linear-gradient(135deg, #FF6B2B 0%, #ff8555 100%)',
-                    fontWeight: 600,
-                    fontFamily: 'Poppins, sans-serif'
-                  }}
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Book Now</span>
-                </motion.a>
+                <motion.div whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href={BOOK_NOW_HREF}
+                    onClick={onCloseMenu}
+                    className="w-full px-6 py-3 rounded-lg text-white shadow-md flex items-center justify-center gap-2"
+                    style={{
+                      background: 'linear-gradient(135deg, #FF6B2B 0%, #ff8555 100%)',
+                      fontWeight: 600,
+                      fontFamily: 'Poppins, sans-serif'
+                    }}
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>Book Now</span>
+                  </Link>
+                </motion.div>
               </div>
             </nav>
           </motion.div>

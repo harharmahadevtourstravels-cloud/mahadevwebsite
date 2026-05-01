@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, MapPinned, Phone } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/features/home/lib/booking';
-import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, OFFICE_ADDRESS_LINES, OFFICE_ADDRESS_SHORT } from '../lib/constants';
+import { BOOK_NOW_HREF, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, OFFICE_ADDRESS_LINES, OFFICE_ADDRESS_SHORT } from '../lib/constants';
 import { WhatsAppIcon } from '../icons/WhatsAppIcon';
 
 type FooterProps = {
@@ -60,7 +60,7 @@ export function Footer({ logo }: FooterProps) {
                 { label: 'Pricing', href: '/#pricing' },
                 { label: 'Blogs', href: '/blogs' },
                 { label: 'Contact Us', href: '/#contact' },
-                { label: 'Book Now', href: '/#home' }
+                { label: 'Book Now', href: BOOK_NOW_HREF }
               ].map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-gray-400 hover:text-[#FF6B2B] transition-colors">

@@ -1,0 +1,24 @@
+# OpenNext for Cloudflare — https://opennext.js.org/cloudflare/get-started
+# Build output paths must stay aligned with `opennextjs-cloudflare build`.
+name = "mahadev-website"
+main = ".open-next/worker.js"
+compatibility_date = "2024-12-30"
+compatibility_flags = [ "nodejs_compat", "global_fetch_strictly_public" ]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# Required for OpenNext request routing / self-invocation.
+[[services]]
+binding = "WORKER_SELF_REFERENCE"
+service = "mahadev-website"
+
+# Next.js image optimization in Workers.
+[images]
+binding = "IMAGES"
+
+# Optional: production vars (NEXT_PUBLIC_* are usually inlined at build time).
+# Prefer Dashboard → Workers → Settings → Variables for secrets.
+# [vars]
+# NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION = "your-token"

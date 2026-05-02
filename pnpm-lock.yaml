@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@opennextjs/cloudflare':
-        specifier: ^1.19.5
-        version: 1.19.5(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.87.0)
       lucide-react:
         specifier: 0.487.0
         version: 0.487.0(react@19.2.4)
@@ -27,6 +24,9 @@ importers:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
     devDependencies:
+      '@opennextjs/cloudflare':
+        specifier: ^1.19.5
+        version: 1.19.5(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(wrangler@4.87.0)
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.2.4

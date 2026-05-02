@@ -1,7 +1,8 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect } from "react";
+import { Suspense, useEffect, useRef } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useReportWebVitals } from "next/web-vitals";
 import { SEO_CONVERSION_EVENTS } from "@/features/seo/lib/measurement";
 
@@ -12,7 +13,41 @@ declare global {
   }
 }
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "G-GCLDVDQG6E";
+
+function GaPageViews() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const prevPathRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (!GA_MEASUREMENT_ID || typeof window.gtag !== "function") {
+      return;
+    }
+
+    const search = searchParams.toString();
+    const pagePath = search ? `${pathname}?${search}` : pathname;
+
+    if (prevPathRef.current === null) {
+      prevPathRef.current = pagePath;
+      return;
+    }
+
+    if (prevPathRef.current === pagePath) {
+      return;
+    }
+
+    prevPathRef.current = pagePath;
+    window.gtag("event", "page_view", {
+      page_path: pagePath,
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }, [pathname, searchParams]);
+
+  return null;
+}
 
 export function Analytics() {
   useEffect(() => {
@@ -80,6 +115,9 @@ export function Analytics() {
           });
         `}
       </Script>
+      <Suspense fallback={null}>
+        <GaPageViews />
+      </Suspense>
     </>
   );
 }

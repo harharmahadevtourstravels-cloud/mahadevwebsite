@@ -1,4 +1,6 @@
-import Link from 'next/link';
+"use client";
+
+import Link from "next/link";
 import Image from 'next/image';
 import { Mail, MapPinned, Phone } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/features/home/lib/booking';

@@ -1,5 +1,7 @@
-import { motion } from 'motion/react';
-import { WHY_CHOOSE_FEATURES } from '../lib/constants';
+"use client";
+
+import { motion } from "motion/react";
+import { WHY_CHOOSE_FEATURES } from "../lib/constants-ui";
 
 export function WhyChooseUsSection() {
   return (

@@ -1,5 +1,7 @@
-import { FormEvent } from 'react';
-import { motion } from 'motion/react';
+"use client";
+
+import { FormEvent } from "react";
+import { motion } from "motion/react";
 import { Clock } from 'lucide-react';
 import { getTodayIsoDateLocal } from '../lib/booking';
 import { OFFICE_ADDRESS_INLINE, OFFICE_MAP_EMBED_URL } from '../lib/constants';

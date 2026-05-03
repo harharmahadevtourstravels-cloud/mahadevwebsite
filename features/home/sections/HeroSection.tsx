@@ -1,7 +1,10 @@
-import { motion } from 'motion/react';
-import { ChevronRight, Phone } from 'lucide-react';
-import { ImageWithFallback } from '@/components/ui/image-with-fallback';
-import { CONTACT_PHONE_TEL, HERO_STATS } from '../lib/constants';
+"use client";
+
+import { motion } from "motion/react";
+import { ChevronRight, Phone } from "lucide-react";
+import { ImageWithFallback } from "@/components/ui/image-with-fallback";
+import { CONTACT_PHONE_TEL } from "../lib/constants";
+import { HERO_STATS } from "../lib/constants-ui";
 
 export function HeroSection() {
   return (

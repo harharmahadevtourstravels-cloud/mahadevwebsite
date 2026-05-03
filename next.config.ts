@@ -7,6 +7,9 @@ const CANONICAL_ORIGIN = "https://harharmahadevtravels.in";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  experimental: {
+    optimizePackageImports: ["lucide-react", "motion"],
+  },
   images: {
     remotePatterns: [
       {

@@ -1,4 +1,6 @@
-import { motion } from 'motion/react';
+"use client";
+
+import { motion } from "motion/react";
 import { CheckCircle2, Expand, Users } from 'lucide-react';
 import { ImageWithFallback } from '@/components/ui/image-with-fallback';
 import { Vehicle } from '../lib/types';

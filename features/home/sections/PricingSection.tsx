@@ -1,4 +1,6 @@
-import { motion } from 'motion/react';
+"use client";
+
+import { motion } from "motion/react";
 import { CheckCircle2, Receipt } from 'lucide-react';
 import { PRICING_ROWS } from '../lib/constants';
 

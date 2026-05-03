@@ -1,4 +1,6 @@
-import { HeadphonesIcon, Mail, Phone } from 'lucide-react';
+"use client";
+
+import { HeadphonesIcon, Mail, Phone } from "lucide-react";
 import { buildWhatsAppUrl } from '@/features/home/lib/booking';
 import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL } from '../lib/constants';
 

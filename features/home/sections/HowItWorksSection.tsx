@@ -1,5 +1,7 @@
-import { motion } from 'motion/react';
-import { HOW_IT_WORKS_STEPS } from '../lib/constants';
+"use client";
+
+import { motion } from "motion/react";
+import { HOW_IT_WORKS_STEPS } from "../lib/constants-ui";
 
 export function HowItWorksSection() {
   return (

@@ -1,4 +1,6 @@
-import Link from 'next/link';
+"use client";
+
+import Link from "next/link";
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import { Menu, Phone, X } from 'lucide-react';

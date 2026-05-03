@@ -1,4 +1,6 @@
-import { motion } from 'motion/react';
+"use client";
+
+import { motion } from "motion/react";
 import { Navigation } from 'lucide-react';
 import { PopularRoute } from '../lib/types';
 

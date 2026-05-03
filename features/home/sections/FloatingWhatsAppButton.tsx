@@ -1,4 +1,6 @@
-import { motion } from 'motion/react';
+"use client";
+
+import { motion } from "motion/react";
 import { buildWhatsAppUrl } from '@/features/home/lib/booking';
 import { WhatsAppIcon } from '../icons/WhatsAppIcon';
 

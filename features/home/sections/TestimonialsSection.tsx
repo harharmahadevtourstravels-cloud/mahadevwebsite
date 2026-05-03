@@ -1,5 +1,7 @@
-import Image from 'next/image';
-import { motion } from 'motion/react';
+"use client";
+
+import Image from "next/image";
+import { motion } from "motion/react";
 import { Star } from 'lucide-react';
 import { Testimonial } from '../lib/types';
 

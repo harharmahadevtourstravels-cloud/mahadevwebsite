@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+import bundleAnalyzer from "@next/bundle-analyzer";
 
-initOpenNextCloudflareForDev();
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "true",
+});
 
 const CANONICAL_ORIGIN = "https://harharmahadevtravels.in";
 
@@ -237,4 +239,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

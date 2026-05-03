@@ -14,7 +14,7 @@ import { TestimonialsSection } from '@/features/home/sections/TestimonialsSectio
 import { WhyChooseUsSection } from '@/features/home/sections/WhyChooseUsSection';
 import { buildWhatsAppMessage, buildWhatsAppUrl, createInitialBookingForm, validateBookingForm } from '@/features/home/lib/booking';
 import { POPULAR_ROUTES, TESTIMONIALS, VEHICLES } from '@/features/home/lib/constants';
-import { BookingFieldKey, BookingPrefill, RequiredFieldKey, requiredFieldKeys } from '@/features/home/lib/types';
+import { BookingErrors, BookingFieldKey, BookingPrefill, RequiredFieldKey, requiredFieldKeys } from '@/features/home/lib/types';
 
 export default function HomePage() {
   const [selectedVehicle, setSelectedVehicle] = useState<string | null>(null);
@@ -22,7 +22,7 @@ export default function HomePage() {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
   const [bookingSource, setBookingSource] = useState('Website');
   const [bookingForm, setBookingForm] = useState(createInitialBookingForm());
-  const [bookingErrors, setBookingErrors] = useState<Partial<Record<RequiredFieldKey, string>>>({});
+  const [bookingErrors, setBookingErrors] = useState<BookingErrors>({});
 
   const openGallery = (vehicleId: string) => {
     setSelectedVehicle(vehicleId);
@@ -50,9 +50,15 @@ export default function HomePage() {
 
   const handleBookingFieldChange = (field: BookingFieldKey, value: string) => {
     setBookingForm((prev) => ({ ...prev, [field]: value }));
-    if (requiredFieldKeys.includes(field as RequiredFieldKey) && value.trim()) {
-      setBookingErrors((prev) => ({ ...prev, [field]: undefined }));
-    }
+    setBookingErrors((prev) => {
+      if (field === 'phoneNumber') {
+        return { ...prev, phoneNumber: undefined };
+      }
+      if (requiredFieldKeys.includes(field as RequiredFieldKey) && value.trim()) {
+        return { ...prev, [field]: undefined };
+      }
+      return prev;
+    });
   };
 
   const openBookingModal = ({ vehicleType = '', pickupCity = '', dropCity = '', source = 'Website' }: BookingPrefill = {}) => {
@@ -138,7 +144,6 @@ export default function HomePage() {
 
       <BookingModal
         isOpen={isBookingModalOpen}
-        bookingSource={bookingSource}
         bookingForm={bookingForm}
         bookingErrors={bookingErrors}
         vehicles={VEHICLES}

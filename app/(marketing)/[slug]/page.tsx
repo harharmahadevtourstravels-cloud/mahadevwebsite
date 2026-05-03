@@ -199,7 +199,7 @@ export default async function LocalServicePage({ params }: ServicePageProps) {
               Call Now
             </a>
             <Link
-              href="/#contact"
+              href="/#book"
               className="inline-flex justify-center rounded-xl border border-white/20 px-5 py-3 font-bold text-white transition hover:border-[#FF6B2B] hover:text-[#FFD4C1]"
             >
               Open Booking Form

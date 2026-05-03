@@ -1,6 +1,7 @@
 import { FormEvent } from 'react';
 import { motion } from 'motion/react';
 import { Clock } from 'lucide-react';
+import { getTodayIsoDateLocal } from '../lib/booking';
 import { OFFICE_ADDRESS_INLINE, OFFICE_MAP_EMBED_URL } from '../lib/constants';
 import { BookingErrors, BookingFieldKey, BookingFormData, Vehicle } from '../lib/types';
 
@@ -12,7 +13,14 @@ type BookingCtaSectionProps = {
   onSubmit: (event: FormEvent<HTMLFormElement>) => void;
 };
 
+const fieldClass = (hasError: boolean) =>
+  `w-full px-4 py-3 rounded-lg border focus:ring-2 outline-none transition-all ${
+    hasError ? 'border-red-400 focus:border-red-400 focus:ring-red-200' : 'border-gray-300 focus:border-[#FF6B2B] focus:ring-[#FF6B2B]/20'
+  }`;
+
 export function BookingCtaSection({ bookingForm, bookingErrors, vehicles, onFieldChange, onSubmit }: BookingCtaSectionProps) {
+  const todayMin = getTodayIsoDateLocal();
+
   return (
     <section
       id="book"
@@ -32,106 +40,130 @@ export function BookingCtaSection({ bookingForm, bookingErrors, vehicles, onFiel
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Booking Form */}
           <motion.form initial={false} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} onSubmit={onSubmit} className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl">
-            <div className="grid md:grid-cols-2 gap-5 mb-6">
+            <p className="text-sm text-gray-600 mb-6">
+              Pickup city, drop city, and travel date are required. We&apos;ll open WhatsApp with your details so you can
+              confirm the fare.
+            </p>
+            <div className="space-y-8 mb-6">
               <div>
-                <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                  value={bookingForm.fullName}
-                  onChange={(event) => onFieldChange('fullName', event.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#FF6B2B] focus:ring-2 focus:ring-[#FF6B2B]/20 outline-none transition-all"
-                />
+                <h3 className="text-sm font-bold text-[#0B1F3A] mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Contact
+                </h3>
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
+                      Full name
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter your name"
+                      value={bookingForm.fullName}
+                      onChange={(event) => onFieldChange('fullName', event.target.value)}
+                      autoComplete="name"
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#FF6B2B] focus:ring-2 focus:ring-[#FF6B2B]/20 outline-none transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
+                      Phone number
+                    </label>
+                    <input
+                      type="tel"
+                      placeholder="+91 8055159348"
+                      value={bookingForm.phoneNumber}
+                      onChange={(event) => onFieldChange('phoneNumber', event.target.value)}
+                      autoComplete="tel"
+                      inputMode="tel"
+                      className={fieldClass(Boolean(bookingErrors.phoneNumber))}
+                    />
+                    {bookingErrors.phoneNumber && (
+                      <p className="text-xs text-red-500 mt-1">{bookingErrors.phoneNumber}</p>
+                    )}
+                  </div>
+                </div>
               </div>
+
               <div>
-                <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  placeholder="+91 8055159348"
-                  value={bookingForm.phoneNumber}
-                  onChange={(event) => onFieldChange('phoneNumber', event.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#FF6B2B] focus:ring-2 focus:ring-[#FF6B2B]/20 outline-none transition-all"
-                />
+                <h3 className="text-sm font-bold text-[#0B1F3A] mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Trip
+                </h3>
+                <div className="grid md:grid-cols-2 gap-5">
+                  <div>
+                    <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
+                      Pickup city *
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter pickup location"
+                      value={bookingForm.pickupCity}
+                      onChange={(event) => onFieldChange('pickupCity', event.target.value)}
+                      className={fieldClass(Boolean(bookingErrors.pickupCity))}
+                    />
+                    {bookingErrors.pickupCity && <p className="text-xs text-red-500 mt-1">{bookingErrors.pickupCity}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
+                      Drop city *
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Enter drop location"
+                      value={bookingForm.dropCity}
+                      onChange={(event) => onFieldChange('dropCity', event.target.value)}
+                      className={fieldClass(Boolean(bookingErrors.dropCity))}
+                    />
+                    {bookingErrors.dropCity && <p className="text-xs text-red-500 mt-1">{bookingErrors.dropCity}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
+                      Travel date *
+                    </label>
+                    <input
+                      type="date"
+                      min={todayMin}
+                      value={bookingForm.travelDate}
+                      onChange={(event) => onFieldChange('travelDate', event.target.value)}
+                      className={fieldClass(Boolean(bookingErrors.travelDate))}
+                    />
+                    {bookingErrors.travelDate && <p className="text-xs text-red-500 mt-1">{bookingErrors.travelDate}</p>}
+                  </div>
+                  <div>
+                    <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
+                      Estimated KMs
+                    </label>
+                    <input
+                      type="number"
+                      min={1}
+                      placeholder="100"
+                      value={bookingForm.estimatedKms}
+                      onChange={(event) => onFieldChange('estimatedKms', event.target.value)}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#FF6B2B] focus:ring-2 focus:ring-[#FF6B2B]/20 outline-none transition-all"
+                    />
+                  </div>
+                </div>
               </div>
+
               <div>
-                <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
-                  Pickup City
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter pickup location"
-                  value={bookingForm.pickupCity}
-                  onChange={(event) => onFieldChange('pickupCity', event.target.value)}
-                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 outline-none transition-all ${
-                    bookingErrors.pickupCity ? 'border-red-400 focus:border-red-400 focus:ring-red-200' : 'border-gray-300 focus:border-[#FF6B2B] focus:ring-[#FF6B2B]/20'
-                  }`}
-                />
-                {bookingErrors.pickupCity && <p className="text-xs text-red-500 mt-1">{bookingErrors.pickupCity}</p>}
-              </div>
-              <div>
-                <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
-                  Drop City
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter drop location"
-                  value={bookingForm.dropCity}
-                  onChange={(event) => onFieldChange('dropCity', event.target.value)}
-                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 outline-none transition-all ${
-                    bookingErrors.dropCity ? 'border-red-400 focus:border-red-400 focus:ring-red-200' : 'border-gray-300 focus:border-[#FF6B2B] focus:ring-[#FF6B2B]/20'
-                  }`}
-                />
-                {bookingErrors.dropCity && <p className="text-xs text-red-500 mt-1">{bookingErrors.dropCity}</p>}
-              </div>
-              <div>
-                <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
-                  Travel Date
-                </label>
-                <input
-                  type="date"
-                  value={bookingForm.travelDate}
-                  onChange={(event) => onFieldChange('travelDate', event.target.value)}
-                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 outline-none transition-all ${
-                    bookingErrors.travelDate ? 'border-red-400 focus:border-red-400 focus:ring-red-200' : 'border-gray-300 focus:border-[#FF6B2B] focus:ring-[#FF6B2B]/20'
-                  }`}
-                />
-                {bookingErrors.travelDate && <p className="text-xs text-red-500 mt-1">{bookingErrors.travelDate}</p>}
-              </div>
-              <div>
-                <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
-                  Vehicle Type
-                </label>
-                <select
-                  value={bookingForm.vehicleType}
-                  onChange={(event) => onFieldChange('vehicleType', event.target.value)}
-                  className={`w-full px-4 py-3 rounded-lg border focus:ring-2 outline-none transition-all ${
-                    bookingErrors.vehicleType ? 'border-red-400 focus:border-red-400 focus:ring-red-200' : 'border-gray-300 focus:border-[#FF6B2B] focus:ring-[#FF6B2B]/20'
-                  }`}
-                >
-                  <option value="">Select vehicle</option>
-                  {vehicles.map((vehicle) => (
-                    <option key={vehicle.id} value={vehicle.name}>
-                      {vehicle.name}
-                    </option>
-                  ))}
-                </select>
-                {bookingErrors.vehicleType && <p className="text-xs text-red-500 mt-1">{bookingErrors.vehicleType}</p>}
-              </div>
-              <div>
-                <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
-                  Estimated KMs
-                </label>
-                <input
-                  type="number"
-                  placeholder="100"
-                  value={bookingForm.estimatedKms}
-                  onChange={(event) => onFieldChange('estimatedKms', event.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#FF6B2B] focus:ring-2 focus:ring-[#FF6B2B]/20 outline-none transition-all"
-                />
+                <h3 className="text-sm font-bold text-[#0B1F3A] mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  Vehicle
+                </h3>
+                <div>
+                  <label className="block text-sm mb-2 text-gray-700" style={{ fontWeight: 600 }}>
+                    Vehicle type
+                  </label>
+                  <select
+                    value={bookingForm.vehicleType}
+                    onChange={(event) => onFieldChange('vehicleType', event.target.value)}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#FF6B2B] focus:ring-2 focus:ring-[#FF6B2B]/20 outline-none transition-all"
+                  >
+                    <option value="">Select vehicle</option>
+                    {vehicles.map((vehicle) => (
+                      <option key={vehicle.id} value={vehicle.name}>
+                        {vehicle.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
             <motion.button

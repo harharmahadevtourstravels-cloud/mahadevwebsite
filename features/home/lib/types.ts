@@ -27,7 +27,7 @@ export type Testimonial = {
   timeAgo?: string;
 };
 
-export const requiredFieldKeys = ['pickupCity', 'dropCity', 'travelDate', 'vehicleType'] as const;
+export const requiredFieldKeys = ['pickupCity', 'dropCity', 'travelDate'] as const;
 
 export type RequiredFieldKey = (typeof requiredFieldKeys)[number];
 
@@ -52,7 +52,8 @@ export type BookingPrefill = {
   source?: string;
 };
 
-export type BookingErrors = Partial<Record<RequiredFieldKey, string>>;
+/** Required fields + optional `phoneNumber` when filled but invalid */
+export type BookingErrors = Partial<Record<RequiredFieldKey | 'phoneNumber', string>>;
 
 export type PricingRow = {
   type: string;

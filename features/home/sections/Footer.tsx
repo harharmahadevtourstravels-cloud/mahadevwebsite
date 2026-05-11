@@ -14,6 +14,7 @@ type FooterProps = {
 export function Footer({ logo }: FooterProps) {
   const currentYear = new Date().getFullYear();
   const primaryServices = [
+    { label: 'Tours & Travels in Nashik', href: '/tours-and-travels-in-nashik' },
     { label: 'Tempo Traveller on Rent', href: '/tempo-traveller-on-rent-nashik' },
     { label: 'Bus on Rent', href: '/bus-on-rent-nashik' },
   ];
@@ -37,7 +38,7 @@ export function Footer({ logo }: FooterProps) {
             </div>
             <p className="text-gray-300 mb-2">Since 2006 |  Nashik, Maharashtra</p>
             <p className="text-gray-400 mb-5 max-w-xl">
-            Trusted for local and outstation group travel — tempo travellers and buses on rent
+            Trusted tours and travels in Nashik for local, pilgrimage, wedding, and outstation group travel
             </p>
             <p className="text-sm text-gray-400 leading-relaxed">
               Visit Us

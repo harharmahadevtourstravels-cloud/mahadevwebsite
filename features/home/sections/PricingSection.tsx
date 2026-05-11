@@ -36,7 +36,7 @@ export function PricingSection() {
           className="md:hidden space-y-3"
         >
           {PRICING_ROWS.map((row) => (
-            <div key={row.type} className="bg-white/10 backdrop-blur-md rounded-xl border border-white/15 p-4">
+            <div key={row.id} className="bg-white/10 backdrop-blur-md rounded-xl border border-white/15 p-4">
               <div className="flex items-start justify-between gap-2 mb-3">
                 <div>
                   <div className="text-white text-sm font-semibold leading-tight">{row.type}</div>
@@ -89,7 +89,7 @@ export function PricingSection() {
             <tbody>
               {PRICING_ROWS.map((row, i) => (
                 <tr
-                  key={row.type}
+                  key={row.id}
                   className={`border-b border-white/10 hover:bg-white/5 transition-colors ${i % 2 === 0 ? '' : 'bg-white/3'}`}
                 >
                   <td className="px-6 py-4 text-white text-sm" style={{ fontWeight: 600 }}>{row.type}</td>

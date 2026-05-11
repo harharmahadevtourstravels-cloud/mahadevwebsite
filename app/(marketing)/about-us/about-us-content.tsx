@@ -79,17 +79,13 @@ export function AboutUsContent({ whatsAppUrl }: AboutUsContentProps) {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:py-20">
           <div className="rounded-3xl border border-gray-200 bg-[#F7F8FB] p-4 shadow-sm">
             <div
-              className="relative flex min-h-[420px] items-center justify-center overflow-hidden rounded-2xl bg-linear-to-br from-[#0B1F3A] via-[#17385f] to-[#FF6B2B]"
-              aria-label="Founder profile placeholder for Mr. Yogesh Nikam"
+              className="relative h-[420px] overflow-hidden rounded-2xl bg-[#0B1F3A] bg-cover bg-center"
+              aria-label="Founder profile for Mr. Yogesh Nikam"
+              role="img"
+              style={{ backgroundImage: "url('/images/owner.webp')" }}
             >
-              <div className="absolute inset-0 opacity-15">
-                <div className="absolute left-10 top-10 h-28 w-28 rounded-full border border-white/70" />
-                <div className="absolute bottom-12 right-10 h-40 w-40 rounded-full border border-white/50" />
-              </div>
-              <div className="relative text-center">
-                <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full border-4 border-white/30 bg-white/15 text-5xl font-extrabold text-white shadow-2xl backdrop-blur">
-                  YN
-                </div>
+              <div className="absolute inset-0 bg-linear-to-t from-[#0B1F3A]/90 via-[#0B1F3A]/20 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6 text-center sm:p-8">
                 <p className="mt-5 text-sm font-bold uppercase tracking-[0.2em] text-[#FFD4C1]">Founder</p>
                 <h2 className="mt-1 text-3xl font-extrabold text-white">Mr. Yogesh Nikam</h2>
               </div>

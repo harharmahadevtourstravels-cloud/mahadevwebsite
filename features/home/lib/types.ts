@@ -15,7 +15,8 @@ export type Vehicle = {
 
 export type PopularRoute = {
   destination: string;
-  distance: number;
+  distance?: number;
+  distanceLabel?: string;
 };
 
 export type Testimonial = {
@@ -56,6 +57,7 @@ export type BookingPrefill = {
 export type BookingErrors = Partial<Record<RequiredFieldKey | 'phoneNumber', string>>;
 
 export type PricingRow = {
+  id: string;
   type: string;
   seating: string;
   rateAC: string;

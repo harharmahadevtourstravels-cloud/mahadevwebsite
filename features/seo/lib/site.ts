@@ -13,7 +13,7 @@ export const SITE_UPDATED_AT = "2026-04-29";
 
 export const SITE_NAME = "Har Har Mahadev Tours & Travels";
 export const SITE_DESCRIPTION =
-  "Book tempo travellers, buses, cabs, Nepal packages, and outstation travel from Nashik with Har Har Mahadev Tours & Travels.";
+  "Book trusted tours and travels in Nashik for cabs, tempo travellers, buses, Shirdi-Trimbakeshwar trips, weddings, and outstation travel.";
 export const DEFAULT_OG_IMAGE = "/opengraph-image";
 
 export const BUSINESS_NAME = SITE_NAME;
@@ -36,6 +36,7 @@ export function buildLocalBusinessJsonLd() {
     "@type": "TravelAgency",
     "@id": `${SITE_URL}/#localbusiness`,
     name: BUSINESS_NAME,
+    description: SITE_DESCRIPTION,
     url: SITE_URL,
     logo: absoluteUrl("/icon0.svg"),
     image: absoluteUrl(DEFAULT_OG_IMAGE),
@@ -56,6 +57,8 @@ export function buildLocalBusinessJsonLd() {
       "Panchavati",
       "Shirdi",
       "Trimbakeshwar",
+      "Mumbai",
+      "Pune",
       "Maharashtra",
     ],
     openingHoursSpecification: [

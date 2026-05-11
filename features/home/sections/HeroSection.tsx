@@ -43,8 +43,8 @@ export function HeroSection() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 text-white leading-tight"
               style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800 }}
             >
-              Nashik&apos;s Most Trusted
-              <span className="text-[#FF6B2B]"> Tempo Traveller &amp; Bus Rentals</span>
+              Trusted Tours and Travels in Nashik
+              <span className="text-[#FF6B2B]"> for Tempo Traveller, Bus &amp; Cab Booking</span>
             </motion.h1>
 
             <motion.p
@@ -53,7 +53,7 @@ export function HeroSection() {
               transition={{ delay: 0.5 }}
               className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-2xl"
             >
-              <span className="block">Perfect for Family Trips · Corporate Tours · Wedding Travel · Outstation Journeys</span>
+              <span className="block">Perfect for Shirdi-Trimbakeshwar Darshan · Family Trips · Corporate Tours · Wedding Travel · Outstation Journeys</span>
             </motion.p>
 
             <motion.div

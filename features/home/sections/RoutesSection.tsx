@@ -52,7 +52,9 @@ export function RoutesSection({ popularRoutes, onOpenBookingModal }: RoutesSecti
 
               <div className="pt-4 border-t border-gray-200">
                 <div className="text-sm text-gray-600">Distance (Approx.)</div>
-                <div style={{ fontWeight: 700, color: '#0B1F3A' }}>{route.distance} km</div>
+                <div style={{ fontWeight: 700, color: '#0B1F3A' }}>
+                  {route.distanceLabel ?? `${route.distance} km`}
+                </div>
               </div>
 
               <motion.button

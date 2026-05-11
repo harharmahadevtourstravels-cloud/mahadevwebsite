@@ -12,6 +12,16 @@ type FleetSectionProps = {
   onOpenBookingModal: (vehicleName: string) => void;
 };
 
+function getPriceBadgeLabel(vehicle: Vehicle) {
+  const nonAcMatch = vehicle.minBooking.match(/Non-AC:\s*₹(\d+)(?:\/km)?/i);
+
+  if (nonAcMatch) {
+    return `₹${nonAcMatch[1]}/km`;
+  }
+
+  return `₹${vehicle.rate}/km`;
+}
+
 export function FleetSection({ vehicles, onOpenGallery, onOpenBookingModal }: FleetSectionProps) {
   return (
     <section id="fleet" className="py-16 sm:py-20 md:py-24 lg:py-32 bg-[#F8F9FC]">
@@ -78,7 +88,7 @@ export function FleetSection({ vehicles, onOpenGallery, onOpenBookingModal }: Fl
                     className="text-sm text-white px-3 py-1.5 rounded-full shadow-lg"
                     style={{ background: 'linear-gradient(135deg, #FF6B2B 0%, #e8531a 100%)', fontWeight: 700 }}
                   >
-                    ₹{vehicle.rate}/km
+                    {getPriceBadgeLabel(vehicle)}
                   </span>
                 </div>
 
@@ -113,7 +123,7 @@ export function FleetSection({ vehicles, onOpenGallery, onOpenBookingModal }: Fl
                       <span style={{ fontWeight: 600, color: '#374151' }}>{vehicle.seating}</span>
                     </span>
                     <span className="w-1 h-1 rounded-full bg-gray-300" />
-                    <span className="truncate">{vehicle.minBooking}</span>
+                    <span className="truncate font-semibold">{vehicle.minBooking}</span>
                   </div>
                 </div>
 

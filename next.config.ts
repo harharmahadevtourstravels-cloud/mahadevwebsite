@@ -122,12 +122,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/45-seater-bus-on-rent-nashik",
-        destination: "/45-seater-bus-rent-nashik",
+        destination: "/40-seater-bus-rent-nashik",
+        permanent: true,
+      },
+      {
+        source: "/45-seater-bus-rent-nashik",
+        destination: "/40-seater-bus-rent-nashik",
         permanent: true,
       },
       {
         source: "/ac-bus-hire-nashik-40-seater",
-        destination: "/45-seater-bus-rent-nashik",
+        destination: "/40-seater-bus-rent-nashik",
         permanent: true,
       },
       {

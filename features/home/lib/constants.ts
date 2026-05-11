@@ -2,6 +2,7 @@ import { PopularRoute, PricingRow, Testimonial, Vehicle } from './types';
 
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
+  { label: 'Tours & Travels', href: '/tours-and-travels-in-nashik' },
   { label: 'Rental Vehicle', href: '/#fleet' },
   { label: 'About Us', href: '/about-us' },
   { label: 'Pricing', href: '/#pricing' },
@@ -47,8 +48,8 @@ export const VEHICLES: Vehicle[] = [
     category: 'Luxury Van',
     subtitle: 'Premium Luxury Van',
     seating: '16 Seater',
-    rate: 40,
-    minBooking: '₹40/km',
+    rate: 33,
+    minBooking: '₹33/km',
     image: '/images/urbania/urbania-1.webp',
     images: [
       '/images/urbania/urbania-1.webp',
@@ -83,8 +84,8 @@ export const VEHICLES: Vehicle[] = [
     category: 'Tempo Traveller',
     subtitle: 'Group Travel Van',
     seating: '17 Seater',
-    rate: 28,
-    minBooking: 'AC: ₹28 | Non-AC: ₹23',
+    rate: 23,
+    minBooking: 'AC: ₹23 | Non-AC: ₹18',
     image: '/images/s%2017/WhatsApp%20Image%202026-04-30%20at%203.24.43%20PM.jpeg',
     images: ['/images/s%2017/WhatsApp%20Image%202026-04-30%20at%203.24.43%20PM.jpeg'],
     features: ['Spacious Boot Space', 'Well Maintained', 'AC & Non-AC', 'Wedding Trips']
@@ -183,13 +184,13 @@ export const VEHICLES: Vehicle[] = [
     features: ['Premium Seating', 'Entertainment System', 'AC/Non-AC Options', 'School/College Trips']
   },
   {
-    id: 'bus-45',
-    name: 'Luxury Bus (45 Seater)',
+    id: 'bus-40-alt',
+    name: 'Luxury Bus (40 Seater)',
     category: 'Bus',
     subtitle: 'Grand Group Coach',
-    seating: '45 Seater',
-    rate: 66,
-    minBooking: 'AC: ₹66 | Non-AC: ₹49',
+    seating: '40 Seater',
+    rate: 63,
+    minBooking: 'AC: ₹63/km',
     image: '/images/s-45/bus-s45-1.webp',
     images: [
       '/images/s-45/bus-s45-1.webp',
@@ -200,7 +201,7 @@ export const VEHICLES: Vehicle[] = [
       '/images/s-45/FB_IMG_1747482300646.jpg.webp',
       '/images/s-45/FB_IMG_1747482302862.jpg.webp',
     ],
-    features: ['Smooth Suspension', 'Experienced Driver', 'AC & Non-AC', 'Outstation Journey']
+    features: ['Smooth Suspension', 'Experienced Driver', 'AC Coach', 'Outstation Journey']
   },
   {
     id: 'bus-49',
@@ -240,6 +241,26 @@ export const VEHICLES: Vehicle[] = [
       '/images/s%2049/IMG-20230115-WA0007.webp',
     ],
     features: ['Best-in-class AC', 'Plush Interiors', 'Ideal for Tours', 'Uniformed Driver']
+  },
+  {
+    id: 'bus-49-non-ac',
+    name: 'Non-AC Bus (49 Seater)',
+    category: 'Bus',
+    subtitle: 'Non-AC Group Coach',
+    seating: '49 Seater',
+    rate: 52,
+    minBooking: 'Non-AC: ₹52/km',
+    image: '/images/s-49/Media%20%285%29.webp',
+    images: [
+      '/images/s-49/Media%20%285%29.webp',
+      '/images/s-49/Media%20%287%29.webp',
+      '/images/s-49/Media%20%288%29.webp',
+      '/images/s-49/Media%20%289%29.webp',
+      '/images/s-49/Media%20%2810%29.webp',
+      '/images/s-49/Media%20%2811%29.webp',
+      '/images/s-49/Media%20%2812%29.webp',
+    ],
+    features: ['Non-AC Coach', 'Budget Group Travel', 'Ideal for Tours', 'Professional Driver']
   }
 ];
 
@@ -267,6 +288,18 @@ export const POPULAR_ROUTES: PopularRoute[] = [
   {
     destination: 'Shani Shingnapur',
     distance: 145
+  },
+  {
+    destination: 'Maharashtra Darshan',
+    distanceLabel: 'Custom itinerary'
+  },
+  {
+    destination: 'Kokan Darshan',
+    distanceLabel: 'Custom itinerary'
+  },
+  {
+    destination: 'Goa',
+    distance: 650
   }
 ];
 
@@ -295,15 +328,15 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const PRICING_ROWS: PricingRow[] = [
-  { type: 'Innova Crysta',                seating: '7–8', rateAC: '₹18/km', rateNonAC: null      },
-  { type: 'Tempo Traveller (13 Seater)',   seating: '13',  rateAC: '₹25/km', rateNonAC: '₹21/km' },
-  { type: 'Tempo Traveller (17 Seater)',   seating: '17',  rateAC: '₹28/km', rateNonAC: '₹23/km' },
-  { type: 'Tempo Traveller (20 Seater)',   seating: '20',  rateAC: '₹30/km', rateNonAC: '₹25/km' },
-  { type: 'Tempo Traveller (26 Seater)',   seating: '26',  rateAC: '₹37/km', rateNonAC: '₹30/km' },
-  { type: 'Luxury Bus (35 Seater)',        seating: '35',  rateAC: '₹60/km', rateNonAC: '₹42/km' },
-  { type: 'Luxury Bus (40 Seater)',        seating: '40',  rateAC: '₹63/km', rateNonAC: '₹45/km' },
-  { type: 'Luxury Bus (45 Seater)',        seating: '45',  rateAC: '₹66/km', rateNonAC: '₹49/km' },
-  { type: 'Luxury Bus (49 Seater)',        seating: '49',  rateAC: '₹70/km', rateNonAC: '₹52/km' },
-  { type: 'Force Urbania',                 seating: '16',  rateAC: '₹40/km', rateNonAC: null      },
+  { id: 'innova-crysta',     type: 'Innova Crysta',                seating: '7–8', rateAC: '₹18/km', rateNonAC: null      },
+  { id: 'tempo-13',          type: 'Tempo Traveller (13 Seater)',   seating: '13',  rateAC: '₹25/km', rateNonAC: '₹21/km' },
+  { id: 'tempo-17',          type: 'Tempo Traveller (17 Seater)',   seating: '17',  rateAC: '₹23/km', rateNonAC: '₹18/km' },
+  { id: 'tempo-20',          type: 'Tempo Traveller (20 Seater)',   seating: '20',  rateAC: '₹30/km', rateNonAC: '₹25/km' },
+  { id: 'tempo-26',          type: 'Tempo Traveller (26 Seater)',   seating: '26',  rateAC: '₹37/km', rateNonAC: '₹30/km' },
+  { id: 'bus-35',            type: 'Luxury Bus (35 Seater)',        seating: '35',  rateAC: '₹60/km', rateNonAC: '₹42/km' },
+  { id: 'bus-40-standard',   type: 'Luxury Bus (40 Seater)',        seating: '40',  rateAC: '₹63/km', rateNonAC: '₹45/km' },
+  { id: 'bus-40-premium',    type: 'Luxury Bus (40 Seater)',        seating: '40',  rateAC: '₹63/km', rateNonAC: null      },
+  { id: 'bus-49',            type: 'Luxury Bus (49 Seater)',        seating: '49',  rateAC: '₹70/km', rateNonAC: '₹52/km' },
+  { id: 'force-urbania',     type: 'Force Urbania',                 seating: '16',  rateAC: '₹33/km', rateNonAC: null      },
 ];
 

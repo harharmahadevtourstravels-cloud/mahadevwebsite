@@ -9,28 +9,33 @@ import {
 } from "@/features/seo/lib/site";
 
 export const metadata: Metadata = {
-  title: "Tours and Travels Nashik | Tempo Traveller on Rent in Nashik",
+  title: "Tours and Travels in Nashik | Tempo Traveller, Bus & Cab",
   description:
-    "Book tours and travels Nashik services for tempo traveller in Nashik, bus on rent in Nashik, vehicle rental Nashik, and group travel Nashik.",
+    "Book trusted tours and travels in Nashik for tempo travellers, buses, cabs, Shirdi-Trimbakeshwar trips, weddings, and outstation travel since 2006.",
   keywords: [
+    "tours and travels in Nashik",
     "tours and travels Nashik",
+    "best tours and travels in Nashik",
+    "travel agency Nashik",
     "tempo traveller in Nashik",
     "tempo traveller on rent in Nashik",
     "bus on rent in Nashik",
+    "cab service in Nashik",
     "vehicle rental Nashik",
     "group travel Nashik",
     "wedding bus hire Nashik",
     "Nashik to Shirdi tempo traveller",
     "tempo traveller in Nasik",
     "tours and travels Nasik",
+    "tour and travel in Nashik",
   ],
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Tours and Travels Nashik | Tempo Traveller and Bus Booking",
+    title: "Tours and Travels in Nashik | Tempo Traveller, Bus and Cab Booking",
     description:
-      "Book tempo traveller on rent in Nashik, bus on rent in Nashik, and group vehicle rentals for local and outstation travel.",
+      "Book Nashik tours and travels for cabs, tempo travellers, buses, Shirdi-Trimbakeshwar trips, weddings, corporate travel, and outstation journeys.",
     url: SITE_URL,
     siteName: SITE_NAME,
     locale: "en_IN",
@@ -46,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tours and Travels Nashik | Tempo Traveller Booking",
+    title: "Tours and Travels in Nashik | Tempo Traveller Booking",
     description:
-      "Tempo traveller in Nashik, bus on rent in Nashik, vehicle rental Nashik, and group travel booking.",
+      "Book cabs, tempo travellers, buses, pilgrimage routes, weddings, corporate trips, and outstation travel from Nashik.",
     images: [DEFAULT_OG_IMAGE],
   },
 };

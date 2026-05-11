@@ -40,12 +40,85 @@ export type ServicePage = {
 
 export const SERVICE_PAGES: ServicePage[] = [
   {
+    slug: "tours-and-travels-in-nashik",
+    title: "Tours and Travels in Nashik",
+    metaTitle: "Tours and Travels in Nashik | Cab, Bus & Tempo Traveller",
+    metaDescription:
+      "Book trusted tours and travels in Nashik for cabs, tempo travellers, buses, Shirdi-Trimbakeshwar trips, weddings, corporate and outstation travel.",
+    updatedAt: "2026-05-11",
+    heroLabel: "Tours and Travels in Nashik",
+    h1: "Trusted tours and travels in Nashik for cabs, buses, and group trips.",
+    intro:
+      "Plan Nashik local sightseeing, Shirdi-Trimbakeshwar darshan, weddings, corporate outings, airport transfers, and outstation tours with clean vehicles and direct call or WhatsApp booking support.",
+    primaryKeyword: "tours and travels in Nashik",
+    secondaryKeywords: [
+      "travel agency Nashik",
+      "cab service in Nashik",
+      "tempo traveller in Nashik",
+      "bus rental Nashik",
+      "Nashik tour packages",
+    ],
+    serviceType: "Travel Agency",
+    routeSummary:
+      "Popular bookings include Nashik local sightseeing, Shirdi, Trimbakeshwar, Saptashrungi, Mumbai, Pune, Aurangabad, Bhimashankar, and custom Maharashtra tours.",
+    fareGuidance:
+      "Share your travel date, pickup point, destination, passenger count, vehicle preference, and trip type to get practical fare guidance before confirmation. Final pricing depends on route, vehicle, trip duration, tolls, permits, parking, driver allowance, and AC or non-AC choice.",
+    rateRows: [
+      { label: "Cab and car rental", value: "Useful for Nashik local sightseeing, airport transfers, Shirdi, Trimbakeshwar, Mumbai, and Pune routes" },
+      { label: "Tempo traveller booking", value: "13, 17, 20, and 26 seater options for family trips, pilgrimages, weddings, and group tours" },
+      { label: "Bus rental", value: "35, 40, and 49 seater buses for school trips, corporate outings, wedding guest travel, and large groups" },
+      { label: "Tour packages", value: "Custom planning for pilgrimage tours, Nashik sightseeing, Maharashtra routes, and multi-day outstation trips" },
+    ],
+    bestFor: [
+      "Nashik local sightseeing",
+      "Shirdi and Trimbakeshwar darshan",
+      "Family and pilgrimage tours",
+      "Wedding and corporate group travel",
+    ],
+    benefits: [
+      "Local Nashik travel agency since 2006",
+      "Cabs, tempo travellers, and buses in one place",
+      "Professional drivers familiar with pilgrimage and highway routes",
+      "Direct call and WhatsApp booking support",
+    ],
+    faqs: [
+      {
+        question: "Which tours and travels services are available in Nashik?",
+        answer:
+          "You can enquire for Nashik local sightseeing, cab booking, tempo traveller rental, bus hire, pilgrimage tours, wedding transport, corporate travel, and outstation trips.",
+      },
+      {
+        question: "Do you arrange Shirdi and Trimbakeshwar trips from Nashik?",
+        answer:
+          "Yes, Shirdi, Trimbakeshwar, Saptashrungi, Bhimashankar, and other pilgrimage routes are commonly planned from Nashik for families and groups.",
+      },
+      {
+        question: "How do I get a fare for my Nashik travel plan?",
+        answer:
+          "Call or WhatsApp your date, pickup location, destination, passenger count, and vehicle preference so the team can share availability and fare guidance.",
+      },
+    ],
+    relatedSlugs: [
+      "tempo-traveller-on-rent-nashik",
+      "bus-on-rent-nashik",
+      "pilgrimage-tour-packages-from-nashik",
+    ],
+    relatedPosts: [
+      {
+        title: "Best tours and travels in Nashik guide",
+        href: "/blogs/best-tours-and-travels-in-nashik",
+        description:
+          "Learn what to check before choosing a Nashik travel agency for local tours, pilgrimages, weddings, and outstation trips.",
+      },
+    ],
+  },
+  {
     slug: "tempo-traveller-on-rent-nashik",
     title: "Tempo Traveller on Rent in Nashik",
     metaTitle: "Tempo Traveller on Rent in Nashik | 13-26 Seater Booking",
     metaDescription:
       "Book 13, 17, 20, and 26 seater tempo traveller rentals in Nashik for family trips, pilgrimages, weddings, and outstation tours.",
-    updatedAt: "2026-04-29",
+    updatedAt: "2026-05-11",
     heroLabel: "Tempo Traveller Rental Nashik",
     h1: "Tempo traveller on rent in Nashik for comfortable group travel.",
     intro:
@@ -60,6 +133,12 @@ export const SERVICE_PAGES: ServicePage[] = [
     serviceType: "Tempo Traveller Rental",
     fareGuidance:
       "Tempo traveller pricing generally starts from listed per-km rates by seating capacity. Final fare depends on route, trip date, tolls, parking, permits, driver allowance, and AC/non-AC choice.",
+    rateRows: [
+      { label: "13 seater listed rate", value: "AC ₹25/km and Non-AC ₹21/km before trip extras" },
+      { label: "17 seater listed rate", value: "AC ₹23/km and Non-AC ₹18/km before trip extras" },
+      { label: "20 seater listed rate", value: "AC ₹30/km and Non-AC ₹25/km before trip extras" },
+      { label: "26 seater listed rate", value: "AC ₹37/km and Non-AC ₹30/km before trip extras" },
+    ],
     bestFor: ["Family tours", "Pilgrimage trips", "Wedding guest travel", "Corporate outings"],
     benefits: [
       "13, 17, 20, and 26 seater options",
@@ -95,8 +174,8 @@ export const SERVICE_PAGES: ServicePage[] = [
     title: "Bus on Rent in Nashik",
     metaTitle: "Bus on Rent in Nashik | 35-49 Seater Luxury Bus Hire",
     metaDescription:
-      "Hire 35, 40, 45, and 49 seater buses in Nashik for weddings, school trips, corporate travel, pilgrimages, and outstation tours.",
-    updatedAt: "2026-04-29",
+      "Hire 35, 40, and 49 seater buses in Nashik for weddings, school trips, corporate travel, pilgrimages, and outstation tours.",
+    updatedAt: "2026-05-11",
     heroLabel: "Bus Rental Nashik",
     h1: "Bus on rent in Nashik for large groups, tours, and events.",
     intro:
@@ -104,13 +183,18 @@ export const SERVICE_PAGES: ServicePage[] = [
     primaryKeyword: "bus on rent in Nashik",
     secondaryKeywords: [
       "luxury bus rental Nashik",
-      "45 seater bus on rent Nashik",
+      "40 seater bus on rent Nashik",
       "49 seater bus on rent Nashik",
       "AC bus hire Nashik",
     ],
     serviceType: "Bus Rental",
     fareGuidance:
       "Bus rental fares vary by seating capacity, route, AC/non-AC requirement, trip duration, and outstation charges such as tolls, permits, parking, and driver allowance.",
+    rateRows: [
+      { label: "35 seater listed rate", value: "AC ₹60/km and Non-AC ₹42/km before trip extras" },
+      { label: "40 seater listed rate", value: "Standard AC ₹63/km, Non-AC ₹45/km, and AC coach ₹63/km before trip extras" },
+      { label: "49 seater listed rate", value: "AC ₹70/km and Non-AC ₹52/km before trip extras" },
+    ],
     bestFor: ["Wedding transport", "School and college trips", "Corporate travel", "Pilgrimage tours"],
     benefits: [
       "35 to 49 seater coach options",
@@ -122,7 +206,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       {
         question: "What bus sizes can I book in Nashik?",
         answer:
-          "You can enquire for 35, 40, 45, and 49 seater buses depending on group size and route requirements.",
+          "You can enquire for 35, 40, and 49 seater buses depending on group size and route requirements.",
       },
       {
         question: "Do you provide buses for weddings?",
@@ -136,7 +220,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       },
     ],
     relatedSlugs: [
-      "45-seater-bus-rent-nashik",
+      "40-seater-bus-rent-nashik",
       "wedding-bus-hire-nashik",
       "corporate-bus-hire-nashik",
     ],
@@ -339,7 +423,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     rateRows: [
       { label: "Approx distance", value: "About 30 km one way from Nashik" },
       { label: "Expected travel time", value: "Around 1 to 1.5 hours one way depending on pickup point and crowd" },
-      { label: "Recommended vehicles", value: "Tempo traveller for small groups; 32 or 45 seater bus for larger groups" },
+      { label: "Recommended vehicles", value: "Tempo traveller for small groups; 32 or 40 seater bus for larger groups" },
     ],
     bestFor: ["Jyotirlinga darshan", "Family temple trips", "Senior citizen groups", "Half-day pilgrimage"],
     benefits: [
@@ -654,17 +738,17 @@ export const SERVICE_PAGES: ServicePage[] = [
   {
     slug: "luxury-ac-bus-rental-nashik",
     title: "Luxury AC Bus Rental in Nashik",
-    metaTitle: "Luxury AC Bus Rental in Nashik | 45-49 Seater Bus Hire",
+    metaTitle: "Luxury AC Bus Rental in Nashik | 40-49 Seater Bus Hire",
     metaDescription:
-      "Book luxury AC bus rental in Nashik for 35, 45, and 49 seater group travel, weddings, corporate trips, school tours, and pilgrimages.",
-    updatedAt: "2026-04-29",
+      "Book luxury AC bus rental in Nashik for 35, 40, and 49 seater group travel, weddings, corporate trips, school tours, and pilgrimages.",
+    updatedAt: "2026-05-11",
     heroLabel: "Luxury AC Bus Nashik",
     h1: "Luxury AC bus rental in Nashik for comfortable large group travel.",
     intro:
       "Hire spacious AC buses from Nashik for weddings, corporate outings, school trips, pilgrimages, and long-distance group tours.",
     primaryKeyword: "luxury AC bus rental Nashik",
     secondaryKeywords: [
-      "45 seater AC bus Nashik",
+      "40 seater AC bus Nashik",
       "49 seater bus on rent Nashik",
       "luxury bus hire Nashik",
       "AC bus hire Nashik",
@@ -672,6 +756,11 @@ export const SERVICE_PAGES: ServicePage[] = [
     serviceType: "Luxury Bus Rental",
     fareGuidance:
       "Luxury AC bus fares depend on seating capacity, route distance, trip duration, AC usage, tolls, permits, parking, and driver allowance.",
+    rateRows: [
+      { label: "35 seater AC reference", value: "Current listed AC rate is ₹60/km before trip extras" },
+      { label: "40 seater AC reference", value: "Current listed AC rate is ₹63/km before trip extras" },
+      { label: "49 seater AC reference", value: "Current listed AC rate is ₹70/km before trip extras" },
+    ],
     bestFor: ["Large family trips", "Wedding transport", "Corporate tours", "Long-distance group travel"],
     benefits: [
       "35 to 49 seater options",
@@ -683,7 +772,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       {
         question: "Which AC bus sizes are available?",
         answer:
-          "You can enquire for 35, 40, 45, and 49 seater bus options depending on date, route, and group size.",
+          "You can enquire for 35, 40, and 49 seater bus options depending on date, route, and group size.",
       },
       {
         question: "Can I book a luxury bus for outstation travel?",
@@ -708,7 +797,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     metaTitle: "12 Seater Tempo Traveller Rent Nashik | Per Km Rates",
     metaDescription:
       "Book 12 seater tempo traveller rent in Nashik for family trips, Shirdi, Trimbakeshwar, weddings, and outstation group travel with AC and non-AC options.",
-    updatedAt: "2026-04-29",
+    updatedAt: "2026-05-11",
     heroLabel: "12 Seater Tempo Traveller Nashik",
     h1: "12 seater tempo traveller rent in Nashik for family and group trips.",
     intro:
@@ -725,7 +814,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       "12 seater tempo traveller pricing is usually discussed on a per-km basis with AC/non-AC choice, minimum kilometres, tolls, parking, permits, and driver allowance confirmed before booking.",
     rateRows: [
       { label: "Suggested group size", value: "10 to 12 passengers with light luggage" },
-      { label: "Indicative per-km basis", value: "Comparable to 13 seater tempo traveller rates; confirm live AC/non-AC fare on call" },
+      { label: "Indicative per-km basis", value: "Comparable to 13 seater tempo traveller rates: AC ₹25/km and Non-AC ₹21/km before trip extras" },
       { label: "Best routes", value: "Shirdi, Trimbakeshwar, Saptashrungi, Mumbai, Pune, and one-day picnics" },
     ],
     bestFor: ["Family trips", "Small pilgrimage groups", "One-day picnic travel", "Local Nashik Darshan"],
@@ -764,7 +853,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     metaTitle: "17 Seater Tempo Traveller Nashik | AC Non-AC Rent",
     metaDescription:
       "Book 17 seater tempo traveller Nashik rentals for family groups, corporate outings, college trips, pilgrimages, and outstation travel.",
-    updatedAt: "2026-04-29",
+    updatedAt: "2026-05-11",
     heroLabel: "17 Seater Tempo Traveller",
     h1: "17 seater tempo traveller Nashik rental for mid-size groups.",
     intro:
@@ -780,8 +869,8 @@ export const SERVICE_PAGES: ServicePage[] = [
     fareGuidance:
       "17 seater tempo traveller fares are normally based on kilometres, AC/non-AC selection, minimum daily run, outstation charges, tolls, parking, and driver allowance.",
     rateRows: [
-      { label: "Indicative AC fare style", value: "Often discussed around the listed 17 seater AC per-km rate; confirm live rate before booking" },
-      { label: "Indicative non-AC fare style", value: "Lower than AC pricing, subject to vehicle availability and route" },
+      { label: "Current listed AC rate", value: "₹23/km before route extras, tolls, parking, permits, and driver allowance" },
+      { label: "Current listed Non-AC rate", value: "₹18/km before route extras, tolls, parking, permits, and driver allowance" },
       { label: "Popular use cases", value: "Corporate outings, family tours, Shirdi, Trimbakeshwar, Pune, and Mumbai travel" },
     ],
     bestFor: ["Mid-size family groups", "Corporate outings", "College trips", "Pilgrimage tours"],
@@ -820,7 +909,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     metaTitle: "20 Seater Bus Rent Nashik | Group Travel Vehicle Hire",
     metaDescription:
       "Book 20 seater bus rent Nashik options for corporate trips, family groups, school travel, pilgrimages, and local or outstation group travel.",
-    updatedAt: "2026-04-29",
+    updatedAt: "2026-05-11",
     heroLabel: "20 Seater Group Vehicle",
     h1: "20 seater bus rent Nashik option for compact group travel.",
     intro:
@@ -837,6 +926,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       "20 seater group vehicle fare depends on AC/non-AC choice, kilometres, trip duration, route, tolls, permits, parking, and driver allowance.",
     rateRows: [
       { label: "Vehicle fit", value: "Best for groups that need more space than 17 seater but less than a full bus" },
+      { label: "Current listed rate", value: "AC ₹30/km and Non-AC ₹25/km before trip extras" },
       { label: "Fare basis", value: "Per-km or package pricing depending on route and trip duration" },
       { label: "Common trips", value: "Nashik Darshan, Shirdi, Trimbakeshwar, corporate outings, and school trips" },
     ],
@@ -876,7 +966,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     metaTitle: "26 Seater Tempo Traveller Nashik | Large Group Rental",
     metaDescription:
       "Hire 26 seater tempo traveller Nashik rentals for large family groups, weddings, pilgrimages, corporate tours, and outstation journeys.",
-    updatedAt: "2026-04-29",
+    updatedAt: "2026-05-11",
     heroLabel: "26 Seater Tempo Traveller",
     h1: "26 seater tempo traveller Nashik rental for large family and wedding groups.",
     intro:
@@ -893,6 +983,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       "26 seater tempo traveller fare is calculated by seating capacity, AC/non-AC option, kilometres, route, trip duration, tolls, parking, permits, and driver allowance.",
     rateRows: [
       { label: "Group fit", value: "Best for 22 to 26 passengers with coordinated pickup planning" },
+      { label: "Current listed rate", value: "AC ₹37/km and Non-AC ₹30/km before trip extras" },
       { label: "Fare basis", value: "Per-km and package quotes available depending on local or outstation plan" },
       { label: "Best routes", value: "Shirdi, Trimbakeshwar, Saptashrungi, Pune, Mumbai, Aurangabad, and wedding travel" },
     ],
@@ -978,33 +1069,35 @@ export const SERVICE_PAGES: ServicePage[] = [
     ],
     relatedSlugs: [
       "20-seater-bus-rent-nashik",
-      "45-seater-bus-rent-nashik",
+      "40-seater-bus-rent-nashik",
       "corporate-bus-hire-nashik",
     ],
   },
   {
-    slug: "45-seater-bus-rent-nashik",
-    title: "45 Seater Bus on Rent in Nashik",
-    metaTitle: "45 Seater Bus on Rent Nashik | AC Bus Hire",
+    slug: "40-seater-bus-rent-nashik",
+    title: "40 Seater Bus on Rent in Nashik",
+    metaTitle: "40 Seater Bus on Rent Nashik | AC Bus Hire",
     metaDescription:
-      "Hire 45 seater bus on rent Nashik for weddings, pilgrimages, corporate tours, school trips, and AC bus hire Nashik 40 seater searches.",
-    updatedAt: "2026-04-29",
-    heroLabel: "45 Seater Bus Nashik",
-    h1: "45 seater bus on rent Nashik for large groups and events.",
+      "Hire 40 seater bus on rent Nashik for weddings, pilgrimages, corporate tours, school trips, and AC bus hire Nashik 40 seater searches.",
+    updatedAt: "2026-05-11",
+    heroLabel: "40 Seater Bus Nashik",
+    h1: "40 seater bus on rent Nashik for large groups and events.",
     intro:
-      "Book a 45 seater bus in Nashik for wedding guest travel, pilgrimage groups, corporate tours, school trips, and large outstation journeys.",
-    primaryKeyword: "45 seater bus on rent Nashik",
+      "Book a 40 seater bus in Nashik for wedding guest travel, pilgrimage groups, corporate tours, school trips, and large outstation journeys.",
+    primaryKeyword: "40 seater bus on rent Nashik",
     secondaryKeywords: [
       "AC bus hire Nashik 40 seater",
       "luxury AC bus rent Nashik for wedding",
       "pilgrimage bus rent Nashik",
       "affordable bus hire Nashik",
     ],
-    serviceType: "45 Seater Bus Rental",
+    serviceType: "40 Seater Bus Rental",
     fareGuidance:
-      "45 seater bus fares depend on AC/non-AC choice, route distance, trip duration, reporting time, tolls, permits, parking, and driver allowance.",
+      "40 seater bus fares depend on AC/non-AC choice, route distance, trip duration, reporting time, tolls, permits, parking, and driver allowance.",
     rateRows: [
-      { label: "Best group size", value: "35 to 45 passengers with comfortable group coordination" },
+      { label: "Best group size", value: "35 to 40 passengers with comfortable group coordination" },
+      { label: "Standard 40 seater listed rate", value: "AC ₹63/km and Non-AC ₹45/km before trip extras" },
+      { label: "40 seater AC coach listed rate", value: "AC ₹63/km before trip extras" },
       { label: "Fare basis", value: "Per-km or full-trip quote depending on route, season, and AC/non-AC requirement" },
       { label: "Common uses", value: "Weddings, pilgrimages, school trips, corporate events, and long-distance tours" },
     ],
@@ -1017,17 +1110,17 @@ export const SERVICE_PAGES: ServicePage[] = [
     ],
     faqs: [
       {
-        question: "Can I hire a 45 seater bus for wedding in Nashik?",
+        question: "Can I hire a 40 seater bus for wedding in Nashik?",
         answer:
-          "Yes, 45 seater buses are commonly booked for wedding guest transport, hotel transfers, baraat movement, and outstation wedding travel.",
+          "Yes, 40 seater buses are commonly booked for wedding guest transport, hotel transfers, baraat movement, and outstation wedding travel.",
       },
       {
         question: "Do you provide AC bus hire Nashik 40 seater options?",
         answer:
-          "Yes, 40 and 45 seater AC bus hire can be discussed based on vehicle availability, route, and travel date.",
+          "Yes, 40 seater AC bus hire can be discussed based on vehicle availability, route, and travel date.",
       },
       {
-        question: "Is 45 seater bus suitable for pilgrimage groups?",
+        question: "Is 40 seater bus suitable for pilgrimage groups?",
         answer:
           "Yes, it is suitable for Shirdi, Trimbakeshwar, Saptashrungi, Pandharpur, Bhimashankar, and multi-day pilgrimage routes.",
       },
@@ -1064,7 +1157,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     rateRows: [
       { label: "Approx distance", value: "About 30 km one way from central Nashik" },
       { label: "Expected travel time", value: "Around 1 to 1.5 hours one way, subject to traffic and temple crowd" },
-      { label: "Recommended vehicles", value: "12, 17, 26 seater tempo travellers or 32 to 45 seater buses" },
+      { label: "Recommended vehicles", value: "12, 17, 26 seater tempo travellers or 32 to 49 seater buses" },
     ],
     bestFor: ["Jyotirlinga darshan", "Pilgrimage bus groups", "Senior citizen travel", "Nashik Darshan add-ons"],
     benefits: [
@@ -1087,13 +1180,13 @@ export const SERVICE_PAGES: ServicePage[] = [
       {
         question: "Which vehicle is best for Trimbakeshwar darshan?",
         answer:
-          "Small groups can choose tempo travellers, while larger devotee groups usually prefer 32, 40, or 45 seater buses.",
+          "Small groups can choose tempo travellers, while larger devotee groups usually prefer 32, 40, or 49 seater buses.",
       },
     ],
     relatedSlugs: [
       "nashik-to-trimbakeshwar-tempo-traveller",
       "pilgrimage-tour-packages-from-nashik",
-      "45-seater-bus-rent-nashik",
+      "40-seater-bus-rent-nashik",
     ],
   },
   {
@@ -1180,7 +1273,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     rateRows: [
       { label: "Approx distance", value: "Around 210 km one way" },
       { label: "Expected travel time", value: "About 5 to 6 hours depending on traffic and destination" },
-      { label: "Recommended vehicles", value: "32, 35, 40, or 45 seater bus for large groups; tempo traveller for smaller groups" },
+      { label: "Recommended vehicles", value: "32, 35, 40, or 49 seater bus for large groups; tempo traveller for smaller groups" },
     ],
     bestFor: ["Corporate travel", "College trips", "Wedding movement", "Family group travel"],
     benefits: [
@@ -1198,7 +1291,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       {
         question: "Which bus size is best for Nashik to Pune?",
         answer:
-          "For large groups, 32 to 45 seater buses work well. For smaller groups, a 17 or 26 seater tempo traveller may be more practical.",
+          "For large groups, 32 to 49 seater buses work well. For smaller groups, a 17 or 26 seater tempo traveller may be more practical.",
       },
       {
         question: "Can multiple pickup points be planned?",
@@ -1208,7 +1301,7 @@ export const SERVICE_PAGES: ServicePage[] = [
     ],
     relatedSlugs: [
       "32-seater-bus-rent-nashik",
-      "45-seater-bus-rent-nashik",
+      "40-seater-bus-rent-nashik",
       "corporate-bus-hire-nashik",
     ],
   },

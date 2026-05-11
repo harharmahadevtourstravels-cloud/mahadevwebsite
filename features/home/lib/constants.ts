@@ -83,8 +83,8 @@ export const VEHICLES: Vehicle[] = [
     category: 'Tempo Traveller',
     subtitle: 'Group Travel Van',
     seating: '17 Seater',
-    rate: 23,
-    minBooking: 'AC: ₹23 | Non-AC: ₹18',
+    rate: 28,
+    minBooking: 'AC: ₹28 | Non-AC: ₹23',
     image: '/images/s%2017/WhatsApp%20Image%202026-04-30%20at%203.24.43%20PM.jpeg',
     images: ['/images/s%2017/WhatsApp%20Image%202026-04-30%20at%203.24.43%20PM.jpeg'],
     features: ['Spacious Boot Space', 'Well Maintained', 'AC & Non-AC', 'Wedding Trips']
@@ -249,15 +249,15 @@ export const VEHICLES: Vehicle[] = [
     seating: '49 Seater',
     rate: 52,
     minBooking: 'Non-AC: ₹52/km',
-    image: '/images/s-49/Media%20%285%29.webp',
+    image: '/images/s-49/media-5.webp',
     images: [
-      '/images/s-49/Media%20%285%29.webp',
-      '/images/s-49/Media%20%287%29.webp',
-      '/images/s-49/Media%20%288%29.webp',
-      '/images/s-49/Media%20%289%29.webp',
-      '/images/s-49/Media%20%2810%29.webp',
-      '/images/s-49/Media%20%2811%29.webp',
-      '/images/s-49/Media%20%2812%29.webp',
+      '/images/s-49/media-5.webp',
+      '/images/s-49/media-7.webp',
+      '/images/s-49/media-8.webp',
+      '/images/s-49/media-9.webp',
+      '/images/s-49/media-10.webp',
+      '/images/s-49/media-11.webp',
+      '/images/s-49/media-12.webp',
     ],
     features: ['Non-AC Coach', 'Budget Group Travel', 'Ideal for Tours', 'Professional Driver']
   }
@@ -329,7 +329,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const PRICING_ROWS: PricingRow[] = [
   { id: 'innova-crysta',     type: 'Innova Crysta',                seating: '7–8', rateAC: '₹18/km', rateNonAC: null      },
   { id: 'tempo-13',          type: 'Tempo Traveller (13 Seater)',   seating: '13',  rateAC: '₹25/km', rateNonAC: '₹21/km' },
-  { id: 'tempo-17',          type: 'Tempo Traveller (17 Seater)',   seating: '17',  rateAC: '₹23/km', rateNonAC: '₹18/km' },
+  { id: 'tempo-17',          type: 'Tempo Traveller (17 Seater)',   seating: '17',  rateAC: '₹28/km', rateNonAC: '₹23/km' },
   { id: 'tempo-20',          type: 'Tempo Traveller (20 Seater)',   seating: '20',  rateAC: '₹30/km', rateNonAC: '₹25/km' },
   { id: 'tempo-26',          type: 'Tempo Traveller (26 Seater)',   seating: '26',  rateAC: '₹37/km', rateNonAC: '₹30/km' },
   { id: 'bus-35',            type: 'Luxury Bus (35 Seater)',        seating: '35',  rateAC: '₹60/km', rateNonAC: '₹42/km' },

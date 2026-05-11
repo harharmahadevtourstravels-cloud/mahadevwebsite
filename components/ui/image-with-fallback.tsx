@@ -13,6 +13,8 @@ type ImageWithFallbackProps = {
   fetchPriority?: 'high' | 'low' | 'auto';
   /** Width hints for responsive srcset; required for correct optimization when using `fill`. Use ~100vw only for full-bleed images. */
   sizes?: string;
+  /** Bypass Next's optimizer for already-compressed local assets that it cannot decode reliably. */
+  unoptimized?: boolean;
 };
 
 export function ImageWithFallback({
@@ -22,9 +24,11 @@ export function ImageWithFallback({
   imageClassName,
   priority = false,
   fetchPriority,
-  sizes = '100vw'
+  sizes = '100vw',
+  unoptimized = false
 }: ImageWithFallbackProps) {
   const [didError, setDidError] = useState(false)
+  const shouldBypassOptimization = unoptimized || src.startsWith('/images/s-49/')
 
   if (didError) {
     return (
@@ -48,6 +52,7 @@ export function ImageWithFallback({
         loading={priority ? 'eager' : 'lazy'}
         fetchPriority={fetchPriority}
         sizes={sizes}
+        unoptimized={shouldBypassOptimization}
         className={imageClassName ?? 'object-cover'}
         onError={() => setDidError(true)}
       />

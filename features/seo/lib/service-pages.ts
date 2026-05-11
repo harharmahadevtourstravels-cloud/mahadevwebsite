@@ -135,7 +135,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       "Tempo traveller pricing generally starts from listed per-km rates by seating capacity. Final fare depends on route, trip date, tolls, parking, permits, driver allowance, and AC/non-AC choice.",
     rateRows: [
       { label: "13 seater listed rate", value: "AC ₹25/km and Non-AC ₹21/km before trip extras" },
-      { label: "17 seater listed rate", value: "AC ₹23/km and Non-AC ₹18/km before trip extras" },
+      { label: "17 seater listed rate", value: "AC ₹28/km and Non-AC ₹23/km before trip extras" },
       { label: "20 seater listed rate", value: "AC ₹30/km and Non-AC ₹25/km before trip extras" },
       { label: "26 seater listed rate", value: "AC ₹37/km and Non-AC ₹30/km before trip extras" },
     ],
@@ -869,8 +869,8 @@ export const SERVICE_PAGES: ServicePage[] = [
     fareGuidance:
       "17 seater tempo traveller fares are normally based on kilometres, AC/non-AC selection, minimum daily run, outstation charges, tolls, parking, and driver allowance.",
     rateRows: [
-      { label: "Current listed AC rate", value: "₹23/km before route extras, tolls, parking, permits, and driver allowance" },
-      { label: "Current listed Non-AC rate", value: "₹18/km before route extras, tolls, parking, permits, and driver allowance" },
+      { label: "Current listed AC rate", value: "₹28/km before route extras, tolls, parking, permits, and driver allowance" },
+      { label: "Current listed Non-AC rate", value: "₹23/km before route extras, tolls, parking, permits, and driver allowance" },
       { label: "Popular use cases", value: "Corporate outings, family tours, Shirdi, Trimbakeshwar, Pune, and Mumbai travel" },
     ],
     bestFor: ["Mid-size family groups", "Corporate outings", "College trips", "Pilgrimage tours"],

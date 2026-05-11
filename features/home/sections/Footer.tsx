@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from 'next/image';
-import { Mail, MapPinned, Phone } from 'lucide-react';
+import { Instagram, Mail, MapPinned, Phone } from 'lucide-react';
 import { buildWhatsAppUrl } from '@/features/home/lib/booking';
 import { BOOK_NOW_HREF, CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_TEL, OFFICE_ADDRESS_LINES, OFFICE_ADDRESS_SHORT } from '../lib/constants';
 import { WhatsAppIcon } from '../icons/WhatsAppIcon';
@@ -101,6 +101,15 @@ export function Footer({ logo }: FooterProps) {
               <a href={buildWhatsAppUrl()} className="flex items-start gap-2 hover:text-[#FF6B2B] transition-colors">
                 <WhatsAppIcon className="w-4 h-4 mt-1 shrink-0" />
                 <span>Chat on WhatsApp</span>
+              </a>
+              <a
+                href="https://www.instagram.com/har.har.mahadev.tt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 hover:text-[#FF6B2B] transition-colors"
+              >
+                <Instagram className="w-4 h-4 mt-1 shrink-0" />
+                <span>Follow on Instagram</span>
               </a>
               <a href={`mailto:${CONTACT_EMAIL}`} className="flex items-start gap-2 hover:text-[#FF6B2B] transition-colors break-all">
                 <Mail className="w-4 h-4 mt-1 shrink-0" />

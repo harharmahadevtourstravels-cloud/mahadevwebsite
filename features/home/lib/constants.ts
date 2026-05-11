@@ -2,7 +2,6 @@ import { PopularRoute, PricingRow, Testimonial, Vehicle } from './types';
 
 export const NAV_ITEMS = [
   { label: 'Home', href: '/' },
-  { label: 'Tours & Travels', href: '/tours-and-travels-in-nashik' },
   { label: 'Rental Vehicle', href: '/#fleet' },
   { label: 'About Us', href: '/about-us' },
   { label: 'Pricing', href: '/#pricing' },

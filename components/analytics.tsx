@@ -15,6 +15,8 @@ declare global {
 
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "G-GCLDVDQG6E";
+const GOOGLE_ADS_ID =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_ID?.trim() || "AW-18156039444";
 
 function GaPageViews() {
   const pathname = usePathname();
@@ -113,6 +115,7 @@ export function Analytics() {
           gtag('config', '${GA_MEASUREMENT_ID}', {
             send_page_view: true
           });
+          gtag('config', '${GOOGLE_ADS_ID}');
         `}
       </Script>
       <Suspense fallback={null}>
